@@ -43,7 +43,6 @@ class WodFileReaderTest {
     }
   }
 
-  @Disabled
   @Test
   public void testApb() throws Exception {
     try (Stream<Path> files = Files.list(Paths.get("src/test/resources/APB/OBS"))) {
