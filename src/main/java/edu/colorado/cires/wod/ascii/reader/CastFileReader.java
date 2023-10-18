@@ -32,12 +32,11 @@ public class CastFileReader implements Iterator<Cast> {
   private Cast cast;
   private final CharReader charReader;
   private final String dataset;
-  private final String file;
+//  private final String file;
 
-  public CastFileReader(CharReader charReader, String dataset, String file) throws IOException {
+  public CastFileReader(CharReader charReader, String dataset) throws IOException {
     this.charReader = charReader;
     this.dataset = dataset;
-    this.file = file;
 //    file = new RandomAccessFile(path.toFile(), "r");
 //    charReader = new RandomAccessFileCharReader(file);
     cast = read();
@@ -117,7 +116,6 @@ public class CastFileReader implements Iterator<Cast> {
           .setCountry(primaryHeader.getCountryCode())
           .setCruiseNumber(primaryHeader.getCruiseNumber())
           .setDataset(dataset)
-          .setFile(file)
           .setOriginatorsCruise(originatorsCruise)
           .setYear((short) primaryHeader.getYear())
           .setMonth((short) primaryHeader.getMonth())

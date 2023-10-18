@@ -52,7 +52,7 @@ class WodFileReaderTest {
           .forEach(file -> {
             try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new GZIPInputStream(new BufferedInputStream(Files.newInputStream(file)))))) {
               System.out.println("Reading " + file);
-              CastFileReader reader = new CastFileReader(new BufferedCharReader(bufferedReader), null, null);
+              CastFileReader reader = new CastFileReader(new BufferedCharReader(bufferedReader), null);
               while (reader.hasNext()){
                 Cast cast = reader.next();
               }
