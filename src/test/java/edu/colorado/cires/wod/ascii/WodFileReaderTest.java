@@ -1,10 +1,10 @@
 package edu.colorado.cires.wod.ascii;
 
 import edu.colorado.cires.wod.ascii.WodFileReader.CharReader;
-import edu.colorado.cires.wod.ascii.WodFileReader.RandomAccessFileCharReader;
 import edu.colorado.cires.wod.ascii.model.Cast;
 import edu.colorado.cires.wod.ascii.reader.BufferedCharReader;
 import edu.colorado.cires.wod.ascii.reader.CastFileReader;
+import edu.colorado.cires.wod.ascii.reader.RandomAccessFileCharReader;
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,7 +15,6 @@ import java.nio.file.Paths;
 import java.util.Comparator;
 import java.util.stream.Stream;
 import java.util.zip.GZIPInputStream;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.EOFException;

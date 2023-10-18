@@ -36,19 +36,6 @@ public class WodFileReader {
     char readChar() throws IOException;
   }
 
-  public static class RandomAccessFileCharReader implements CharReader {
-    private final RandomAccessFile file;
-
-    public RandomAccessFileCharReader(RandomAccessFile file) {
-      this.file = file;
-    }
-
-    @Override
-    public char readChar() throws IOException {
-      return (char) file.readByte();
-    }
-  }
-
 
   private static char readOneTrim(CharReader file) throws IOException {
     char b = file.readChar();
