@@ -20,10 +20,10 @@ import org.junit.jupiter.api.Test;
 import java.io.EOFException;
 import java.io.RandomAccessFile;
 
-class WodFileReaderTest {
+public class WodFileReaderTest {
 
   @Test
-  void testPfl() throws Exception {
+  public void testPfl() throws Exception {
     try (RandomAccessFile file = new RandomAccessFile("src/test/resources/pfl.dat", "r")) {
       CharReader reader = new RandomAccessFileCharReader(file);
       while (true) {
